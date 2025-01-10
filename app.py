@@ -42,7 +42,7 @@ def format_event(event):
 def insert_event(author, action, from_branch=None, to_branch=None):
     if action not in ["PUSH", "PULL", "MERGE"]:
         raise ValueError("Invalid action. Must be 'PUSH', 'PULL REQUEST', or 'MERGE'.")
-
+ 
     event = {
         "request_id": str(uuid.uuid4()),
         "author": author,
